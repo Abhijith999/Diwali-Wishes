@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body,*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.hero-section{
+    min-height: 100vh;
+    background: linear-gradient(248.33deg, #8D287F 10.7%, #D15445 88.42%),
+    linear-gradient(112.41deg, rgba(247, 182, 84, 0.2) 5.47%, rgba(225, 38, 84, 0.2) 93.64%);
+    position: relative;
+    display: grid;
+    place-content: center;
+}
+.hero-section .container{
+    /* max-width: 1280px;
+    margin: 0 auto;
+    padding-inline: 15px; */
+}
+.hero-section .hero-chakra{
+    max-height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-60%,-50%);
+    animation: rotate-yellow-chakra 3s linear infinite;
+    transform-origin: center center;
+}
+@keyframes rotate-yellow-chakra{
+    from{
+        transform:translate(-60%,-50%) rotate(0deg);
+    }
+    to{
+        transform:translate(-60%,-50%) rotate(360deg);
+    }
+}
+.hero-section .light-nest{
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-height: 250px;
+}
+.hero-section .content-section{
+    max-width: 850px;
+    margin: 0 auto;
+}
+.hero-section .content-section .header{
+    display: flex;
+    align-items: baseline;
+    gap: 25px;
+}
+.hero-section .content-section .header h1{
+    font-size: 96px;
+    line-height: 127px;
+    font-family: "Playfair", serif;
+    font-weight: 900;
+    color: #fff;
+}
+.hero-section .content-section .header img{
+    width: 150px;
+}
+.hero-section .content-section p{
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45.25px;
+    color: #fff;
+    margin-block: 40px;
+}
+.hero-section .content-section .btn{
+    padding: 8px 35px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    border-radius: 80px;
+    border: none;
+}
+.hero-section .content-section .cracker-btn{
+    margin-right: 60px;
+}
+.hero-section .content-section .blessing-btn{
+    background: transparent;
+    border: 3px solid #fff;
+    color: #fff;
+}
