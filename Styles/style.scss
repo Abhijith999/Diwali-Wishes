@@ -5,23 +5,29 @@ body,* {
 	box-sizing: border-box;
 }
 .hero-section {
-	min-height: 100vh;
+	height: 100vh;
 	background: linear-gradient(248.33deg, #8D287F 10.7%, #D15445 88.42%),
     linear-gradient(112.41deg, rgba(247, 182, 84, 0.2) 5.47%, rgba(225, 38, 84, 0.2) 93.64%);
 	position: relative;
 	display: grid;
 	place-content: center;
-	.container {
-	}
+    overflow-y: hidden;
+	
 	.hero-chakra {
-		max-height: 80vh;
+		max-height: 75vh;
 		position: absolute;
 		top: 50%;
 		left: 0;
 		transform: translate(-60%,-50%);
 		animation: rotate-yellow-chakra 3s linear infinite;
-		transform-origin: center center;
+		transform-origin: center;
 	}
+    .light-nest {
+        position: absolute;
+        right: 0;
+        top: 0;
+        max-height: 250px;
+    }
 	.content-section {
 		max-width: 850px;
 		margin: 0 auto;
@@ -56,6 +62,7 @@ body,* {
 			line-height: 48px;
 			border-radius: 80px;
 			border: none;
+            cursor: pointer;
 		}
 		.cracker-btn {
 			margin-right: 60px;
@@ -68,12 +75,13 @@ body,* {
 	}
 }
  
-	.hero-section {
-		.light-nest {
-			position: absolute;
-			right: 0;
-			top: 0;
-			max-height: 250px;
-		}
-	}
+// Animations
+@keyframes rotate-yellow-chakra{
+    from{
+        transform:translate(-60%,-50%) rotate(0deg);
+    }
+    to{
+        transform:translate(-60%,-50%) rotate(360deg);
+    }
+}
 
